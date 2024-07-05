@@ -13,6 +13,7 @@ export default function Home() {
         <input name="prompt" placeholder="Enter your prompt, ..." className="border-2 border-emerald-300 p-2 rounded-lg gap-4" />
         <button disabled={pending} className="bg-emerald-300 p-2 rounded-lg" >Generate Story</button>
       </form>
+      
     </main>
   );
 }

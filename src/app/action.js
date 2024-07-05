@@ -36,7 +36,6 @@ export async function generateKidsStory(_, formData) {
     presence_penalty: 0,
   });
   const result = JSON.parse(response.choices[0].message.content);
-  console.log(result);
 
   // Generate Image
   const output = await replicate.run(
@@ -47,5 +46,13 @@ export async function generateKidsStory(_, formData) {
       }
     }
   );
-  console.log(output);
+  return {
+    success: true,
+    data: {
+      story: result,
+      image: output[0]
+    }
+  }
+
+
 }
